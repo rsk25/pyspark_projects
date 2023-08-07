@@ -15,7 +15,7 @@ people = sc.map(map_func)
 
 # Infer schema and register the DataFrame as a table.
 schema_people = spark.createDataFrame(people).cache()
-schema_people.createorReplaceTempView("people")
+schema_people.createOrReplaceTempView("people")
 
 # SQL can be run over DataFrames that have been registered as a table
 query = '''
